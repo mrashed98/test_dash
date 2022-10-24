@@ -1,0 +1,6 @@
+selenium
+bs4
+webdriver-manager
+pytest
+pytest-order
+selenium-page-factory
