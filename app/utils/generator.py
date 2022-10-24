@@ -18,7 +18,7 @@ def get_creds():
         'email': email,
         'password': password
     }
-    file = open('../config/creds.json', 'w')
+    file = open('config/creds.json', 'w')
     json_object = json.dumps(data, indent=3)
     file.write(json_object)
     file.close()
