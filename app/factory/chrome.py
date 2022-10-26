@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver import ChromeOptions
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.core.utils import ChromeType
 
 
 class Chrome:
@@ -16,6 +17,6 @@ class Chrome:
             self.options.add_argument(argument)
 
     def initialize_driver(self):
-        self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options = self.options)
+        self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()), options = self.options)
         self.driver.maximize_window()
         return self.driver

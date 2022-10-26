@@ -1,4 +1,9 @@
 
+
+apt-get update
+
+apt-get install wget
+
 apt-get update -qqy \
   && apt-get -qqy --no-install-recommends install firefox \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
